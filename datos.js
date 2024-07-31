@@ -1921,5 +1921,33 @@ console.log(nivel(beers, 7.0));
 
 // Punto 2
 
+function masAlcohol(array) {
+
+    let alcohol = array.sort((a , b) => b.abv - a.abv)
+    return alcohol.slice(0, 10)
+  
+}
+console.log(masAlcohol(beers));
+
+
+// Punto 3
+function menosAmarga(array) {
+
+  let amargor = array.sort((a , b) => a.ibu - b.ibu)
+  return amargor.slice(0, 10)
+
+}
+console.log(menosAmarga(beers));
+
+// Punto 4
+
+function menosAmarga(array, ) {
+
+  let amargor = array.sort((a , b) => a.ibu - b.ibu)
+  return amargor.slice(0, 10)
+
+}
+console.log(menosAmarga(beers));
+
 
 
