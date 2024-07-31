@@ -1916,7 +1916,7 @@ function nivel (cervezas, alcohol) {
     )
 }
 
-console.log(nivel(beers, 7.0));
+console.log(nivel(beers, 8.0));
 
 
 // Punto 2
@@ -1941,13 +1941,17 @@ console.log(menosAmarga(beers));
 
 // Punto 4
 
-function menosAmarga(array, ) {
-
-  let amargor = array.sort((a , b) => a.ibu - b.ibu)
-  return amargor.slice(0, 10)
-
+function ordenPropiedad(array, propiedad, bool) {
+	let orden
+	if (bool === false) {
+		orden = array.sort((a, b) => b[propiedad] - a[propiedad])
+	} else {
+		orden = array.sort((a, b) => a[propiedad] - b[propiedad])
+		
+	}
+	return orden.slice(0, 10)
 }
-console.log(menosAmarga(beers));
+console.log(ordenPropiedad(beers, "attenuation_level", true));
 
 
 
