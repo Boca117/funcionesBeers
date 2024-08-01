@@ -1991,7 +1991,6 @@ function tablaCervezas (array, id) {
   contenedor.appendChild(table)
 
 }
-  
 
-tablaCervezas(beers, "contenedor")
+tablaCervezas(beers, "tabla")
 
