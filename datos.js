@@ -1954,4 +1954,44 @@ function ordenPropiedad(array, propiedad, bool) {
 console.log(ordenPropiedad(beers, "attenuation_level", true));
 
 
+// Punto 5
+
+
+function tablaCervezas (array, id) {
+  let contenedor = document.getElementById(id);
+  contenedor.innerHTML = "";
+
+  let table = document.createElement("table");
+  table.className = "table table-dark table-striped";
+
+  table.innerHTML = `
+    <colgroup>
+      <col span="3">
+    </colgroup>
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">ABV</th>
+        <th scope="col">IBU</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  `
+
+  array.forEach(beer => {
+    let row = document.createElement("tr");
+    row.innerHTML = `
+      <td>${beer.name}</td>
+      <td>${beer.abv}</td>
+      <td>${beer.ibu}</td>
+    `
+    table.querySelector("tbody").appendChild(row)
+  });
+  contenedor.appendChild(table)
+
+}
+  
+
+tablaCervezas(beers, "contenedor")
 
